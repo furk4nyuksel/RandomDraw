@@ -1,0 +1,41 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Draw"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="Draw.MainWindow"
+        mc:Ignorable="d"
+        Title="Rastgele Sıralama Uygulaması" Height="450" Width="800">
+    <Grid Margin="0,0,0,-21">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="156*"/>
+            <ColumnDefinition Width="393*"/>
+            <ColumnDefinition Width="183*"/>
+        </Grid.ColumnDefinitions>
+        <ListView HorizontalAlignment="Left"   x:Name="ListBx" Height="182" Margin="10,48,0,0" VerticalAlignment="Top" Width="100" Grid.Column="4">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox Grid.Column="2" x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="0,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Kaydet" Grid.Column="2" x:Name="btnNameSave" HorizontalAlignment="Left" Margin="0,159,0,0" VerticalAlignment="Top" Width="90" Click="BtnNameSave_Click"/>
+        <Label Content="İsim Griniz" Grid.Column="2" FontWeight="Bold"  HorizontalAlignment="Left" Margin="0,82,0,0" VerticalAlignment="Top"/>
+        <Button Content="Sil" Grid.Column="4" x:Name="btnRemove" HorizontalAlignment="Left" Margin="10,248,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.51,-0.227"/>
+        <Label Content="Kaydedilen İsimler" FontWeight="Bold"  Grid.Column="4"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="9.564,-2.273"/>
+        <Button Content="Rastgele Sırala" Grid.Column="3" x:Name="btnDraw" FontSize="25"  FontWeight="Bold" HorizontalAlignment="Left" Margin="64,327,0,0" VerticalAlignment="Top" Width="223"  Height="62"/>
+        <ListView HorizontalAlignment="Left"   x:Name="ListBxDraw" Height="249" Margin="68,48,0,0" VerticalAlignment="Top" Width="219" Grid.Column="3">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Çekiliş Sonucu" FontWeight="Bold"  Grid.Column="3"  HorizontalAlignment="Left" Margin="123,16,0,0" VerticalAlignment="Top" RenderTransformOrigin="9.564,-2.273"/>
+
+    </Grid>
+</Window>
